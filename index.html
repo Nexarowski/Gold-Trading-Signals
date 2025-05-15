@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sygnały Kupna i Sprzedaży Złota</title>
+    <title>Sygnały Handlowe Złota</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Sygnały Handlowe Złota</h1>
-        <div id="signal-box">
-            <h2 id="signal">Ładowanie danych...</h2>
-            <button onclick="checkSignal()">Sprawdź sygnał</button>
+    <div class="container mt-5">
+        <h1 class="text-center text-warning">Sygnały Handlowe Złota</h1>
+        <div class="card p-4 mt-4">
+            <h2 id="signal" class="text-center">Ładowanie danych...</h2>
+            <button class="btn btn-warning w-100" onclick="checkSignal()">Sprawdź sygnał</button>
+        </div>
+        <div class="card mt-4 p-4">
+            <canvas id="goldChart"></canvas>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
