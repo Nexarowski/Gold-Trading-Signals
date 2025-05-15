@@ -8,16 +8,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center text-warning">Sygnały Handlowe Złota</h1>
-        <div class="card p-4 mt-4">
-            <h2 id="signal" class="text-center">Ładowanie danych...</h2>
-            <button class="btn btn-warning w-100" onclick="checkSignal()">Sprawdź sygnał</button>
-        </div>
-        <div class="card mt-4 p-4">
-            <canvas id="goldChart"></canvas>
+    <!-- Ekran logowania -->
+    <div id="login-screen" class="container mt-5">
+        <div class="card p-4 shadow-lg">
+            <h1 class="text-center text-warning">Logowanie</h1>
+            <input type="password" id="password" class="form-control mt-3" placeholder="Wpisz hasło">
+            <button class="btn btn-warning w-100 mt-3" onclick="checkPassword()">Zaloguj</button>
+            <p id="login-error" class="text-danger mt-2"></p>
         </div>
     </div>
+
+    <!-- Główna strona -->
+    <div id="main-screen" class="container mt-5" style="display: none;">
+        <h1 class="text-center text-warning">Panel Handlowy Złota</h1>
+        <div class="card p-4 mt-4 shadow-lg">
+            <canvas id="goldChart"></canvas>
+        </div>
+        <div class="card p-4 mt-4 shadow-lg">
+            <div class="row text-center">
+                <div class="col">
+                    <button class="btn btn-success w-100" onclick="executeTrade('buy')">Kup</button>
+                </div>
+                <div class="col">
+                    <button class="btn btn-danger w-100" onclick="executeTrade('sell')">Sprzedaj</button>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p id="signal" class="text-center fs-4">Ładowanie danych...</p>
+                <p id="rsi-value" class="text-center">RSI: Ładowanie...</p>
+                <p id="macd-value" class="text-center">MACD: Ładowanie...</p>
+                <p id="ema-value" class="text-center">EMA: Ładowanie...</p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
