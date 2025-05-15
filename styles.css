@@ -1,5 +1,5 @@
 body {
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     font-family: Arial, sans-serif;
 }
 
@@ -10,14 +10,20 @@ h1 {
 .card {
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 
-button {
-    margin-top: 20px;
+#login-screen {
+    max-width: 400px;
 }
 
 #signal {
-    margin-bottom: 20px;
     font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-success, .btn-danger {
+    font-size: 18px;
+    padding: 10px 20px;
 }
